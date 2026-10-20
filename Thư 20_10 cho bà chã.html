@@ -1,0 +1,225 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Thư 20/10 cho bà chã</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Be+Vietnam+Pro:wght@400;500;600&display=swap">
+<style>
+/* Layout: một lá thư tay đặt giữa nền hồng phấn, cánh hoa rơi phía sau; số 20/10 viết tay làm tiêu đề. */
+:root {
+  --ground: #fbe9ec;
+  --ground-2: #f6d3da;
+  --paper: #fffaf8;
+  --ink: #4a2230;
+  --ink-soft: #8a5664;
+  --rose: #d1365f;
+  --rose-deep: #a8203f;
+  --leaf: #5f8a5a;
+  --line: #f0c9d2;
+  --font-hand: "Dancing Script", "Segoe Script", cursive;
+  --font-body: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #2a1219; --ground-2: #3a1822; --paper: #3b1d26; --ink: #fbe4ea;
+    --ink-soft: #d9a9b6; --rose: #ff7a9c; --rose-deep: #ff9db5; --leaf: #9cc495; --line: #5a2c3a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --ground: #2a1219; --ground-2: #3a1822; --paper: #3b1d26; --ink: #fbe4ea;
+  --ink-soft: #d9a9b6; --rose: #ff7a9c; --rose-deep: #ff9db5; --leaf: #9cc495; --line: #5a2c3a;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body {
+  background: radial-gradient(120% 80% at 50% 0%, var(--ground-2), var(--ground) 60%);
+  background-color: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+#petals { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+
+.wrap {
+  position: relative; z-index: 1;
+  max-width: 560px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 40px 56px;
+  display: flex; flex-direction: column; align-items: center; gap: 28px;
+}
+
+.hero { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.eyebrow {
+  font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft);
+}
+.date {
+  font-family: var(--font-hand); font-weight: 700; color: var(--rose);
+  font-size: clamp(76px, 24vw, 128px); line-height: 1; margin: 6px 0 0;
+  animation: rise 1.1s cubic-bezier(.2,.8,.2,1) both;
+}
+.rose { width: 64px; height: auto; margin-top: -4px; }
+
+.letter {
+  width: 100%;
+  background: var(--paper);
+  border-radius: 6px;
+  padding: 32px 26px 28px;
+  box-shadow: 0 1px 0 var(--line), 0 18px 40px -18px rgba(168, 32, 63, .35);
+  position: relative;
+  background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 33px, var(--line) 33px, var(--line) 34px);
+  background-position: 0 58px;
+  animation: rise 1.1s .25s cubic-bezier(.2,.8,.2,1) both;
+}
+.letter::before {
+  content: ""; position: absolute; top: -10px; left: 50%; width: 92px; height: 22px;
+  transform: translateX(-50%) rotate(-2deg);
+  background: color-mix(in srgb, var(--rose) 28%, transparent);
+  border-radius: 2px;
+}
+.greet { font-family: var(--font-hand); font-weight: 700; font-size: 30px; color: var(--rose-deep); line-height: 1.3; margin: 0 0 6px; }
+.letter p { margin: 0; line-height: 34px; text-wrap: pretty; }
+.letter p + p { margin-top: 0; }
+.letter .wish { font-weight: 500; }
+.sign { margin-top: 18px !important; text-align: right; font-family: var(--font-hand); font-size: 26px; color: var(--rose-deep); }
+
+.love {
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+.heart-btn {
+  font-family: var(--font-body); font-size: 15px; font-weight: 600;
+  color: #fff; background: var(--rose);
+  border: 0; border-radius: 999px; padding: 12px 26px; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px;
+  box-shadow: 0 8px 20px -8px var(--rose);
+  transition: transform .15s ease, background .2s ease;
+}
+:root[data-theme="dark"] .heart-btn { color: #2a1219; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .heart-btn { color: #2a1219; } }
+.heart-btn:hover { background: var(--rose-deep); }
+.heart-btn:active { transform: scale(.95); }
+.heart-btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.count { font-size: 13px; color: var(--ink-soft); font-variant-numeric: tabular-nums; min-height: 1.4em; }
+
+.pop {
+  position: fixed; z-index: 5; pointer-events: none; font-size: 22px; color: var(--rose);
+  animation: pop 1.4s ease-out forwards;
+}
+
+@keyframes rise { from { opacity: .001; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes pop {
+  0% { transform: translate(0,0) scale(.6); opacity: 1; }
+  100% { transform: translate(var(--dx), -160px) scale(1.2); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .date, .letter { animation: none; }
+  #petals { display: none; }
+}
+</style>
+
+<canvas id="petals" aria-hidden="true"></canvas>
+
+<main class="wrap">
+  <header class="hero">
+    <span class="eyebrow">Ngày Phụ nữ Việt Nam</span>
+    <h1 class="date">20/10</h1>
+    <svg class="rose" viewBox="0 0 64 64" aria-hidden="true">
+      <path d="M32 34 C32 44 31 52 30 62" stroke="var(--leaf)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      <path d="M31 46 C24 42 20 44 18 48 C24 50 28 49 31 46Z" fill="var(--leaf)"/>
+      <path d="M32 50 C38 46 42 47 45 51 C39 53 35 52 32 50Z" fill="var(--leaf)"/>
+      <circle cx="32" cy="22" r="14" fill="var(--rose)"/>
+      <path d="M22 20 C24 12 32 9 38 13 C33 13 29 16 28 22Z" fill="var(--rose-deep)"/>
+      <path d="M42 22 C41 30 34 34 27 31 C33 30 37 27 37 21Z" fill="var(--rose-deep)"/>
+      <path d="M28 21 C29 17 34 16 36 19 C34 19 31 20 30 24Z" fill="var(--paper)" opacity=".35"/>
+    </svg>
+  </header>
+
+  <article class="letter">
+    <h2 class="greet">hi bà chã hơm,</h2>
+    <p>chòn iuu aayy.</p>
+    <p>Hôm nay ngày 20/10 là ngày phụ nữ Việt Nam. Ngày này, là một ngày đặc biệt của em không kém gì ngày sinh nhật cả.</p>
+    <p class="wish">Anh chúc em 20/10 zui zẻ lunnn xinh đẹpppp, học giỏi, mãi yêuu anhh, chơm bà chã hơm anh nhìu lắm, thương em bằng cả trái tim này ♥</p>
+    <p class="sign">Anh Huy</p>
+  </article>
+
+  <section class="love">
+    <button class="heart-btn" id="heartBtn" type="button">♥ Gửi tim cho anh</button>
+    <span class="count" id="count" aria-live="polite"></span>
+  </section>
+</main>
+
+<script>
+(function () {
+  // Cánh hoa rơi
+  var cv = document.getElementById('petals');
+  var ctx = cv.getContext('2d');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var W, H, dpr, petals = [];
+  function color() { return getComputedStyle(document.documentElement).getPropertyValue('--rose').trim() || '#d1365f'; }
+  function size() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = cv.clientWidth; H = cv.clientHeight;
+    cv.width = W * dpr; cv.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function make(initial) {
+    return {
+      x: Math.random() * W, y: initial ? Math.random() * H : -20,
+      r: 5 + Math.random() * 7, vy: 0.5 + Math.random() * 0.9,
+      sway: Math.random() * Math.PI * 2, rot: Math.random() * Math.PI, vr: (Math.random() - .5) * 0.03,
+      a: 0.35 + Math.random() * 0.45
+    };
+  }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    var c = color();
+    for (var i = 0; i < petals.length; i++) {
+      var p = petals[i];
+      p.y += p.vy; p.sway += 0.015; p.x += Math.sin(p.sway) * 0.6; p.rot += p.vr;
+      if (p.y > H + 20) petals[i] = make(false);
+      ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot);
+      ctx.globalAlpha = p.a; ctx.fillStyle = c;
+      ctx.beginPath(); ctx.ellipse(0, 0, p.r, p.r * 0.6, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.restore();
+    }
+    requestAnimationFrame(draw);
+  }
+  if (!reduce) {
+    size();
+    var n = Math.round(Math.min(36, W / 14));
+    for (var i = 0; i < n; i++) petals.push(make(true));
+    window.addEventListener('resize', size);
+    requestAnimationFrame(draw);
+  }
+
+  // Nút gửi tim
+  var btn = document.getElementById('heartBtn');
+  var countEl = document.getElementById('count');
+  var n2 = 0;
+  var msgs = ['Anh nhận được rồi nè ♥', 'Thêm nữa đi bà chã', 'Tim anh đầy luôn rồi', 'Iuu em nhiều lắm'];
+  btn.addEventListener('click', function (e) {
+    n2++;
+    countEl.textContent = n2 + ' tim · ' + msgs[Math.min(Math.floor(n2 / 5), msgs.length - 1)];
+    var r = btn.getBoundingClientRect();
+    var k = reduce ? 1 : 7;
+    for (var i = 0; i < k; i++) {
+      var h = document.createElement('span');
+      h.className = 'pop'; h.textContent = '♥';
+      h.style.left = (r.left + r.width / 2 - 10 + (Math.random() - .5) * 40) + 'px';
+      h.style.top = (r.top - 4) + 'px';
+      h.style.setProperty('--dx', ((Math.random() - .5) * 140) + 'px');
+      h.style.animationDelay = (i * 60) + 'ms';
+      document.body.appendChild(h);
+      setTimeout(function (el) { el.remove(); }, 1700, h);
+    }
+  });
+})();
+</script>
+
+</body></html>
